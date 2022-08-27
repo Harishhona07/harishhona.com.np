@@ -1,0 +1,141 @@
+<!--Generated from HTML Code Play-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Continue Reading"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+#more {display: none;}
+
+body {
+  font-family: Arial;
+  padding: 8px;
+  background: #f1f1f1;
+  font-family: Lora,serif;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  background: black;
+  color: white;
+ 
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+
+
+
+/* Add a card effect for articles */
+.card {
+   background-color: lightgrey;
+   padding: 20px;
+   margin-top: 20px;
+   
+   
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+    background-color:black;
+  padding: 20px;
+  text-align: center;
+@media screen and (max-width: 800px) {
+  .leftcolumn{   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>BLOGS/ARTICLES</h2>
+</div>
+
+<div class="row">
+  
+    <div class="card">
+      <h2>First 5 Lines Of Code</h2>
+      <h5> 26th August, 2022</h5>
+      
+<img src="https://i.ibb.co/L1fh2Nh/In-Shot-20220827-110757055.jpg" height=200px width=100%>
+      <p>I wrote my first 5 lines of code, in a Computer Notebook<span id="dots">...</span><span id="more">.. Since then, those 5 lines still flash in my mind: The teacher writing C codes for us , the begineers, and  hoping for better studies and career on IT field.<br><br>
+      The <span style="color:red;font-weight:bold;"><a href="http://harishhona.website2.me/blogs/basics-of-c-programming">BASICS OF C PROGRAMMING</a></span> is the very first blog I publised on<a href="https://www.website.com"><span style="color:blue; font-weight:bold;"> website.com</span></a>, when I found my interest on blogging.
+       <br><br>[<strong><i>First Blog on the site</i>]</p>
+       </span></p>
+<button onclick="myFunction()" id="myBtn" >Continue Reading</button>
+  
+    </div>
+    
+  
+    
+
+<div class="footer">
+  <font color="grey" size=2>
+  harishhona.com.np/blog<br>
+  © 2022 Harish Hona<br>
+  Email ✉️: harishhona07@gmail.com<br><br>
+ 
+  <table align="center" width="130px">
+  <tr>
+<td><a href="https://www.facebook.com/harishhona07" target="_blank"> <img src="https://i.ibb.co/9WHT6j7/facebook-256.png" height="25" width="25"></a></td>
+<td><a href="https://www.instagram.com/harishhona7" target="_blank"><img src="https://i.ibb.co/M8SLQxy/instagram-4-256.png" height="30" width="30"></a></td>
+<td><a href="https://www.twitter.com/harish_hona" target="_blank"><img src="https://i.ibb.co/R9gs8WP/twitter-256.png" height="30" width="30"></a></td>
+</tr>
+</table>
+  
+  
+</div>
+
+</body>
+</html>
+
+<!--Generated from HTML Code Play.
+ More application
+ Android Code Play
+ SQL Code Play-->
