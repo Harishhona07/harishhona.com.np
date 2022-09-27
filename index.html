@@ -23,6 +23,75 @@ background-size:auto;
 font-family: Quicksand, sans-serif;
 }
 
+/*Open Animation*/
+.container-word{
+    position:relative;
+    text-align:center;
+    font-family:Quicksand;
+  
+}
+.title {
+  font-family: "Quicksand",
+  sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  position:relative;
+}
+
+.title-word {
+  animation: color-animation 5s linear infinite;
+  position:relative;
+  
+}
+
+.title-word-1 {
+  --color-1: white;
+  --color-2: transparent;
+  --color-3: transparent;
+  
+  
+}
+
+.title-word-2 {
+   
+  --color-1: transparent;
+  --color-2: white;
+  --color-3: transparent;
+}
+
+.title-word-3 {
+  --color-1: transparent;
+  --color-2: transparent;
+  --color-3: white;
+}
+
+
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)
+         opacity: 0;
+  }     
+  15%   {color: var(--color-1)    
+  }
+  30%   {color: var(--color-2)
+        opacity: 0;
+  }
+  45%   {color: var(--color-2)
+       
+  }
+  60%   {color: var(--color-3)
+         opacity: 0;
+  }
+  75%   {color: var(--color-3)
+  
+        
+  }
+   
+
+
+  
+}
+/*Close Animation*/
 
 
 .footer {
@@ -129,7 +198,17 @@ li a:hover {
 <font size="5" color="white">
 <h1 align="center" id="h1">Harish Hona</h1>
 </Font>
-</Div>
+<!Open Animation>
+<div class="container-word">
+  <h2 class="title">
+    <span class="title-word title-word-1">Student,</span><br>
+    <span class="title-word title-word-2">Rookie Developer,</span><br>
+    <span class="title-word title-word-3">SerioHolic</span>
+ 
+  </h2>
+</div>
+<!Close Animation>
+<br>
 <Font size="2" color="white">
 <h2 align="center" id="h2">Bhaktapur | Nepal</h2>
 <br><br><br>
