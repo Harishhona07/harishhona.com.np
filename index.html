@@ -92,7 +92,18 @@ font-family: Quicksand, sans-serif;
   
 }
 /*Close Animation*/
-
+.rotate-logo {
+    animation: rotation 0.8s;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 .footer {
     background-color:black;
@@ -200,7 +211,7 @@ li a:hover {
 </Font>
 <center>
   <a href="https://harishhona.com.np"><img src="images/logo.jpg"
-                                           height="70px" width="70px"></a></center>
+                                           height="70px" width="70px" class="rotate-logo"></a></center>
 <div class="container-word">
   <h2 class="title">
     <span class="title-word title-word-1">Student,</span><br>
