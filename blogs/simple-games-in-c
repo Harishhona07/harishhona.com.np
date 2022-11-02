@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Simple Games in C | Blog - Harish Hona</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+<link rel="icon" 
+     type="image/png" 
+     href="images/logo.jpg">
+
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+    font-family: 'Quicksand';
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+#active{
+    background-color:green;
+   }
+body {
+
+  padding: 8px;
+  background: #f1f1f1;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.header {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  background: black;
+  color: white;
+ 
+}
+
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+
+
+
+/* Add a card effect for articles */
+.card {
+   background-color: lightgrey;
+   padding: 20px;
+   margin-top: 20px;
+   font-weight:normal;
+   
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+    background-color:black;
+  padding: 20px;
+  text-align: center;
+@media screen and (max-width: 800px) {
+  .leftcolumn{   
+    width: 100%;
+    padding: 0;
+  }
+ 
+ }
+ .para{
+     font-size:40px;
+ }
+}
+.continuebutton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  margin-left:9%;
+  width:80%;
+  
+}
+
+
+
+.continuebutton0 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.continuebutton0:hover {
+  background-color: #555555;
+  color: white;
+}
+.credits{
+    background-color:lightgrey;
+    font-family:Lora, Serif;
+    font-size:3px;
+    width:100%;
+    padding:5px; 
+}
+#links{
+  text-decoration: none;
+}
+
+
+</style>
+</head>
+<body>
+<ul>
+  <li><a class="active" href="https://harishhona.com.np/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/blog" id="active">Blog</a></li>
+  <li><a href="/contact">Contact</a></li>
+</Ul>
+
+<div class="header">
+  <h2>BLOGS </h2>
+  <p align="center" style="margin-bottom:0px;"><font color="grey">/simple-games-in-c</font></p>
+</div>
+  <font size="2"><p align="right">[Sorted by: Selected]</p></font>
+  
+
+<!--Blog 4-->
+  
+    <div class="card">
+         <center>
+      <h2>Simple Games In C<BR> <i><font size=3>Programming Language</font></i></h2>
+      <h5> 27th October, 2022</h5>
+         </center>
+
+      <p>
+        Game development in C Programming language is best for the begineers. Although other
+        programming languages such as Python, C++/C#, and Java are the high performers for developing games,
+      C can be used for light and simple game development, which I recommend to use it in the begineer phase. 
+    </p>
+    
+      <p>
+        In this blog, I am presenting two simple games made out of C, with the source code. The structure and logics are the same 
+        in both games, so it will be eaiser to understand the algorithm.
+      </p>
+      <br>
+
+      <!--ROCK PAPER AND SCISSORS-->
+      <h3>1. Rock Paper And Scissors</h3>
+      <img src="C:\Users\acer\Pictures\Screenshots\rock-paper-scissors.png" width=100%>
+      <p>Rock, Paper and Scissors is the very first game I had made in C. It is based on CPU vs User (1 Player) 
+        where CPU chooses random options out of Rock, Paper or Scissors. It is simple to understand,
+        and not as complicated as other types of games. The mechanism of this game is based only on the 3 random 
+        numbers that is generated for the CPU, deciding the winner, and recording the results in a file.
+
+      </p>
+      <p align="center"><font size=3  >Source Code: [extension: c]</font>
+      <script src="https://gist.github.com/Harishhona07/76d6a425d1dee4cd3632594fabbc0ade.js"></script>
+      </p> 
+      <br>
+
+
+      <!--DICE ROLL-->
+      <h3>2. Dice Roll</h3>
+      <img src="C:\Users\acer\Pictures\Screenshots\Screenshot (36).png" width="100%">
+      <p>Dice Roll is another simple game in C. The mechanism of this game is same as the previous game, based on the random numbers function.
+      It is also a single player game (CPU vs User) where user has to press a key to roll the dice, and for the CPU's roll, 
+      random number out 6 numbers is chosen.
+      </p> 
+      <p align="center"><font size=3>Source Code: [extension: c]</font><br>
+        <script src="https://gist.github.com/Harishhona07/151dd8626f92eccca8633d897819a1fd.js"></script></p>   
+      <br><br>
+      <p>
+      These games are simple with less than 150 lines of code. I personally recommend to try these methods and logic
+      to build games in C. I have made the whole project on the same topic. Click the link:
+      <a id="links" href="C:\Users\acer\Desktop\Project\Report\project-report.pdf" target="_blank">View PDF file</a>
+      </p>
+      <p><b>
+        <u>External Links & Tags:</u><br><br>
+        <a id="links" href="#">Project PDF</a> <br><br>
+        <a id="links" href="#">C Programming</a> <br>
+        
+      </b></p>
+      <br>
+      <center>
+      <b>Thank You For Reading!</b>
+    </center>
+    <br>
+    
+      
+<a href="/blog">
+     <button class="continuebutton continuebutton0"> Back To Main Blog Page</button>
+     </a>
+  
+    </div>
+    
+   <br><br> 
+
+<div class="credits"><font size=2>
+ <center>
+📝 By <a href="https://www.facebook.com/harishhona07" target="_blank"> 
+  <img src="images\logo.jpg" height="15px" width="15px"> Harish Hona</a><br><br>
+<font style="margin:5px;">Social Links Below:</font></font>
+</center>
+
+</div> 
+ <br>   
+    
+<!--Footer-->
+<div class="footer">
+  <font color="grey" size=2>
+  <b>harishhona.com.np/blog/simple-games-in-c <br>
+   © 2022 Harish Hona<br>
+  Email ✉️: harishhona07@gmail.com
+</b><br><br>
+ 
+  <table align="center" width="130px">
+  <tr>
+<td><a href="https://www.facebook.com/harishhona07" target="_blank"> <img src="https://i.ibb.co/9WHT6j7/facebook-256.png" height="25" width="25"></a></td>
+<td><a href="https://www.instagram.com/harishhona7" target="_blank"><img src="https://i.ibb.co/M8SLQxy/instagram-4-256.png" height="30" width="30"></a></td>
+<td><a href="https://www.twitter.com/harish_hona" target="_blank"><img src="https://i.ibb.co/R9gs8WP/twitter-256.png" height="30" width="30"></a></td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>
+
