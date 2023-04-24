@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 /*Whole Body*/
 body{
-background-image:url('https://i.ibb.co/qrf26wj/IMG-20220813-191156.jpg');
+
 font-family: Quicksand, Sans-Serif;
 
 }
@@ -26,7 +26,19 @@ font-family: Quicksand, Sans-Serif;
      text-align: center;
      background: black;
      color: white;
+     animation-name: slide-down;
+     animation-duration: 1s;
+     position: relative;
     }
+@keyframes slide-down {
+    from{
+        top:-50px;
+    }
+    to{
+        top:0;
+    }
+    
+}
   ul {
   list-style-type: none;
   margin: 0;
@@ -61,6 +73,19 @@ li a:hover {
     background-color:lightgrey;
     width:90%;  
     border-radius:10px;
+    animation-name: slide;
+    animation-duration: 1s;
+    position: relative;
+}
+@keyframes slide {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
 }
 .line {
   border-style: solid;
