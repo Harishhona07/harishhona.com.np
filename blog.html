@@ -65,10 +65,33 @@ body {
   text-align: center;
   background: black;
   color: white;
- 
+  animation-name: slide-down;
+  animation-duration: 1s;
+  position: relative;
 }
+@keyframes slide-down {
+    from {
+        top: -50px;
+    }
+    to {
+        top:0;
+    }
 
-
+}
+#sort {
+    animation-name: slide-left;
+    animation-duration: 1s;
+    position: relative;
+}
+@keyframes slide-left {
+    from{
+        right: -100px;
+    }
+    to{
+     right: 0;
+    }
+    
+}
 .leftcolumn {   
   float: left;
   width: 75%;
@@ -213,7 +236,7 @@ body {
 <div class="header">
   <h2>BLOGS</h2>
      </div>
-  <font size="2"><p align="right">[Sorted by: Latest]</p></font>
+  <font size="2"><p align="right" id="sort">[Sorted by: Latest]</p></font>
      
 <!--Blog 7-->
 <div class="blog-content">
