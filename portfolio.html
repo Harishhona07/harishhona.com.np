@@ -4,7 +4,7 @@
 
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <Title>Portfolio | Harish Hona</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" 
@@ -80,7 +80,7 @@ li a:hover {
 @keyframes slide {
   from {
     left: -500px;
-    opacity: 0;
+    opacity: 0
   }
   to {
     left: 0;
@@ -92,13 +92,16 @@ li a:hover {
   border-width: 1px;
   
 }
+.dotted-line {
+  border-top: 2px dotted black; /
+  margin-top: 10px;
+}
     #navlogo {
     position: absolute;
     top: 8px;
     right: 100px;   
 }
 .continuebutton {
- 
   border: none;
   color: black;
   padding: 8px 8px;
@@ -110,21 +113,27 @@ li a:hover {
   transition-duration: 0.5s;
   cursor: pointer;
   width:80%;
- 
+  height: 45px;
   
 }
 
 
 .continuebutton0 {
-  background-color: lightgrey;
-  color: black;
-  opacity:0.9;
+  background-color: black;
+  color: whitesmoke;
   border: 2px solid #555555;
+  width: 45%;
+  border-radius: 30px;
+  font-family: quicksand, sans-serif ;
+  
 }
 
 .continuebutton0:hover {
-  background-color: #555555;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
+}
+#link {
+  text-decoration: none;
 }
 .footer {
   background-color:black;
@@ -170,6 +179,9 @@ li a:hover {
     right: 20px;
    }
   }
+#description{
+  font-size: 15px;
+}
   </style>
 </head>
 
@@ -192,8 +204,10 @@ li a:hover {
 
 <div class="background">
 <u><h2>About Me</h2></u>
-<h4>I'm Harish Hona, </h4>
+<h4>I'm Harish Hona,</h4>
 <p>a student and a rookie developer.
+  <br><br> I am currently pursuing my +2 level education at
+   <b><a id="link" href="https://khwopahss.edu.np/" target="_blank">Khwopa Higher Secondary School</a>.</b> 
 </p>
 </div>
 
@@ -202,21 +216,36 @@ li a:hover {
 <div class="background">
   <u><h2>My Works</h2></u>
   <br><br>
-  <h5>Login Project</h5>
+  <h4>Login Project</h4>
+  <h5>3rd March, 2023</h5>
+  <p id="description">Login system developed using HTML, CSS and PHP.</p>
   <center>
   <a href="https://code.harishhona.com.np/login-project" target="_blank">
     <button class="continuebutton continuebutton0">Visit</button>
     </a>
   </center>
     <br><br>
+    <div class="dotted-line"></div>
+    <br>
+    <h4>C Programming Games</h4>  
+  <h5>21st October, 2022</h5>
+  <p id="description">Simple games developed using C Programming Language.</p>
+  <center>
+  <a href="" target="_blank">
+    <button class="continuebutton continuebutton0">Visit</button>
+    </a>
+  </center>
+    <br><br>
+    <div class="line"></div>
+    <br>
+    <h4>Fan Edits</h4>
   <h5>17th December, 2022</h5>
   <iframe width=100% height="500" src="https://www.youtube.com/embed/ptmW90d2tVc" title="Everything Is Now | DARK" 
   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
    allowfullscreen></iframe>
  
    <br><br>
-   
-<div class="line"></div>
+  <div class="dotted-line"></div>
 <br>
 <h5>12th December, 2022</h5>
    <iframe width=100%  height="500" src="https://www.youtube.com/embed/qjRTNmdJJgw" title="The Last Dance Ends | CR7 Forever" 
@@ -232,8 +261,8 @@ li a:hover {
   <b>
 <font color="grey" size=2>
 harishhona.com.np/portfolio<br>
-© 2022 Harish Hona<br>
-Email ✉️: harishhona07@gmail.com
+© 2023 Harish Hona<br>
+<i class="fa fa-envelope" style="font-size:14px; color:white;"></i>&nbsp;contact@harishhona.com.np<br>
   </font>
   </b>
   <br><br>
