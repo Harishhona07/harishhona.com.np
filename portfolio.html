@@ -10,14 +10,12 @@
 <link rel="icon" 
      type="image/png" 
      href="images/logo.jpg">
-
+<link rel="stylesheet" href="animation.css">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 /*Whole Body*/
 body{
-
-font-family: Quicksand, Sans-Serif;
-
+    font-family: Quicksand, Sans-Serif; 
 }
 
 .header { 
@@ -30,15 +28,6 @@ font-family: Quicksand, Sans-Serif;
      animation-duration: 1s;
      position: relative;
     }
-@keyframes slide-down {
-    from{
-        top:-50px;
-    }
-    to{
-        top:0;
-    }
-    
-}
   ul {
   list-style-type: none;
   margin: 0;
@@ -77,23 +66,14 @@ li a:hover {
     animation-duration: 1s;
     position: relative;
 }
-@keyframes slide {
-  from {
-    left: -500px;
-    opacity: 0
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
-}
+
 .line {
   border-style: solid;
   border-width: 1px;
   
 }
 .dotted-line {
-  border-top: 2px dotted black; /
+  border-top: 2px dotted black; 
   margin-top: 10px;
 }
     #navlogo {
@@ -182,6 +162,11 @@ li a:hover {
 #description{
   font-size: 15px;
 }
+#text {
+  animation-name: fade-slide-up;
+  animation-duration: 2s;
+  position: relative;
+}
   </style>
 </head>
 
@@ -203,12 +188,14 @@ li a:hover {
 <center>
 
 <div class="background">
+<div id="text">
 <u><h2>About Me</h2></u>
 <h4>I'm Harish Hona,</h4>
 <p>a student and a rookie developer.
   <br><br> I am currently pursuing my +2 level education at
    <a id="link" href="https://khwopahss.edu.np/" target="_blank">Khwopa Higher Secondary School</a>.
 </p>
+</div>
 </div>
 
 <br><br><br>
