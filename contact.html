@@ -10,7 +10,8 @@
 <link rel="icon" 
      type="image/png" 
      href="images/logo.jpg">
-
+<!--Animation Keyframes-->
+<link rel="stylesheet" href="animation.css">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 /*Whole Body*/
@@ -29,15 +30,7 @@ font-family: Quicksand, Sans-Serif;
      animation-duration: 1s;
      position: relative;
     }
-@keyframes slide-down {
-    from{
-        top:-50px;
-    }
-    to{
-        top:0;
-    }
-    
-}
+
   ul {
   list-style-type: none;
   margin: 0;
@@ -81,15 +74,7 @@ li a:hover {
     animation-duration: 1s;
     position: relative; 
 }
-@keyframes slide {
-    from{
-        left: -500px;
-    }
-    to {
-        left:0;
-    }
-    
-}
+
 #name-email{
     padding:10px;
     height:30px;
@@ -98,6 +83,9 @@ li a:hover {
     border-radius:7px;
     border: 1px solid black;
     text-align: center;
+    animation-name: slide-up;
+    animation-duration: 1.1s;
+    position: relative;
 }
 #message{
     padding:10px;
@@ -107,6 +95,9 @@ li a:hover {
     border-radius:7px;
     border: 1px solid black;
     text-align: center;
+    animation-name: slide-up;
+    animation-duration: 1.2s;
+    position: relative;
 }
 #message:hover,#name-email:hover{
     
@@ -121,16 +112,23 @@ li a:hover {
     border-radius:50px;
     background-color: black;
     color: whitesmoke;
+    transition-duration: 0.5s;
     
    
 }
 #button:hover{
     background-color: white;
     color: black;
+    font-size: medium;
+    
+
+    
 }
 #texts{
     padding:20px;
-    
+    animation-name:slide-left;
+    animation-duration: 1s;  
+    position: relative;  
 }
     .background{
     background-color: black;
@@ -199,8 +197,8 @@ li a:hover {
 <form action="https://formsubmit.co/contact@harishhona.com.np" method="POST">
 <div class="messagebox">
 <font size="2"><h1 style="margin:0px;">Leave A Message</h1></font><br><br>
-<input type="text" id="name-email" placeholder="Full Name (Required)" name="Name" required><br>
-<input type="email" id="name-email" placeholder="Email (Required)" name="Email" required>
+<input type="text" id="name-email" placeholder="Full Name*" name="Name" required><br>
+<input type="email" id="name-email" placeholder="Email*" name="Email" required>
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://harishhona.com.np/contact">
 <br>
@@ -229,7 +227,7 @@ li a:hover {
 </center>
 
 
-  
+
 </div>
 <br><br><br><br><br><br>
 
