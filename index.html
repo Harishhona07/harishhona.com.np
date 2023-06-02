@@ -104,14 +104,20 @@ font-family: Quicksand, sans-serif;
 }
 /*Close Animation*/
 .rotate-logo {
-    animation: rotation 0.8s;
+    animation: rotation 1s infinite;
+    animation-delay: 2.8s;
+    animation-duration: 2.8s;
+  
   }
   
   @keyframes rotation {
-    from {
+    0% {
       transform: rotate(0deg);
     }
-    to {
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
       transform: rotate(360deg);
     }
   }
@@ -250,14 +256,50 @@ li a:hover {
     right: 20px;
    }
     .fade-in img{
-        height: 35%;
-        width:75%;
+        height: 10%;
+        width:60%;
      }
+     #img2 {
+        height: 5%;
+        width: 60%;
+     }
+    
   }
+#img2 {
+    height: 10%;
+    width: 40%;
 
+}
 #mail {
   color:#FFCCCB;
   text-decoration: none;
+}
+.fade-in img {
+    position: absolute;
+    animation: fade-in 2s linear forwards;
+  }
+
+  .fade-out img {
+    position: absolute;
+    animation: fade-out 2s linear forwards;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 </Style>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -283,14 +325,14 @@ li a:hover {
 </Font>
   </div>
 -->
-  <br><br>
+  <br><br><br>
 <center>
- <div class="fade-in">   
-<img src="images/title-logo.png"
-height="20%" width="40%">
-  </div>
-<br><br>
-  <a href="https://harishhona.com.np"><img src="images/png-logo.png"
+    <div class="fade-in" style="display: flex; justify-content: center; align-items: center;">
+        <img src="C:\Users\acer\Downloads\title-logo.png" height="15%" width="40%">
+        <img src="C:\Users\acer\Downloads\titlelogogot.png" height="10%" width="40%" style="display: none;" class="img2">
+      </div>
+<br><br><br>
+  <a href="https://harishhona.com.np"><img src="C:\Users\acer\Pictures\Images\logo.jpg"
                                            height="70px" width="70px" class="rotate-logo"></a></center>
 <div class="container-word">
   <h2 class="title">
@@ -381,6 +423,34 @@ height="20%" width="40%">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4161457633595246"
      crossorigin="anonymous"></script>
 </body>
-
+<script>
+    // JavaScript to control the fade-in and fade-out transitions
+  
+    const images = document.querySelectorAll('.fade-in img');
+  
+    // Show the first image initially
+    images[0].style.display = 'block';
+  
+    let currentImageIndex = 0;
+  
+    function fadeInNextImage() {
+      const currentImage = images[currentImageIndex];
+  
+      // Hide the current image
+      currentImage.style.display = 'none';
+      currentImage.classList.remove('fade-in');
+  
+      // Show the next image
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      const nextImage = images[currentImageIndex];
+      nextImage.style.display = 'block';
+      nextImage.classList.add('fade-in');
+  
+      // Schedule the next fade-in after fade-out completes
+      setTimeout(fadeInNextImage, 2800); // Adjust the delay (in milliseconds) as needed
+    }
+  
+    // Start the fade-in transition
+    setTimeout(fadeInNextImage, 2800); // Adjust the delay (in milliseconds) as needed
+  </script>
 </html>
-
