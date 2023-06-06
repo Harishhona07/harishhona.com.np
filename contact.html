@@ -19,7 +19,45 @@ body,#name-email, #message, #button{
 font-family: Quicksand, Sans-Serif;
 
 }
+#dialogBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
 
+#dialogContent {
+  background-image: url("https://i0.wp.com/reelchicago.com/wp-content/uploads/2019/09/RAVEN005ab.jpg?ssl=1");
+  padding: 120px;
+  border-radius: 5px;
+}
+
+#dialogContent p {
+  margin: 0 0 10px;
+}
+
+#dialogContent button {
+  /*padding: 10px 20px;*/
+    padding:10px;
+    height:40px;
+    width:30%;
+    text-align: center;
+    border-width: 1px;
+    border-radius:10px;
+    background-color: black;
+    color: whitesmoke;
+    transition-duration: 0.5s;
+}
+#dialogContent button:hover {
+  background-color: white;
+    color: black;
+    font-size: medium;
+}
 .header { 
      padding: 10px;
      font-size: 20px;
@@ -73,6 +111,7 @@ li a:hover {
     animation-name: slide;
     animation-duration: 1s;
     position: relative; 
+    
 }
 
 #name-email{
@@ -173,6 +212,10 @@ li a:hover {
 #bottomnav a:hover{
   text-decoration: underline;
 }
+.strokeme {
+    color: white;
+    text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+  }
   </style>
 </head>
 
@@ -196,7 +239,7 @@ li a:hover {
   <center>
 <form action="https://formsubmit.co/contact@harishhona.com.np" method="POST">
 <div class="messagebox">
-<font size="2"><h1 style="margin:0px;">Leave A Message</h1></font><br><br>
+<font size="2"><h1 style="margin:0px;">Send a Raven</h1></font><br><br>
 <input type="text" id="name-email" placeholder="Full Name*" name="Name" required><br>
 <input type="email" id="name-email" placeholder="Email*" name="Email" required>
   <input type="hidden" name="_captcha" value="false">
@@ -204,10 +247,18 @@ li a:hover {
 <br>
 <textarea placeholder="Your Message" id="message" name="Message"></textarea>
 <br><br>
-<button type="submit" id="button">Send</button>
-</form>  
+ 
+<button type="submit" id="button" onclick="dialogbox()">Send</button>
+</form>
+<div id="dialogBox" style="display: none;">
+  <div id="dialogContent">
+    <!-- Dialog box content -->
+    <p class="strokeme">
+      Thank You for your message. I'll reach out to you soon!
+    </p>
+    <button onclick="hideDialog()">Okay</button>
+  </div>
 </div>
-
   </center>
 <br><br>
      <center>
@@ -261,4 +312,18 @@ harishhona.com.np/contact<br>
   
 </div>
 </body>
+<script>
+  function showDialog(event) {
+  event.preventDefault(); // Prevent form submission
+
+  var dialogBox = document.getElementById("dialogBox");
+  dialogBox.style.display = "flex";
+}
+
+function hideDialog() {
+  var dialogBox = document.getElementById("dialogBox");
+  dialogBox.style.display = "none";
+}
+
+</script>
 </html>
