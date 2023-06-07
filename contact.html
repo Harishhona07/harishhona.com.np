@@ -237,28 +237,32 @@ li a:hover {
 <font size="4" id="texts">Leave me a message for direct contact:</font>
 <br><br>
   <center>
-<form action="https://formsubmit.co/contact@harishhona.com.np" method="POST">
-<div class="messagebox">
-<font size="2"><h1 style="margin:0px;">Send a Raven</h1></font><br><br>
-<input type="text" id="name-email" placeholder="Full Name*" name="Name" required><br>
-<input type="email" id="name-email" placeholder="Email*" name="Email" required>
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://harishhona.com.np/contact">
-<br>
-<textarea placeholder="Your Message" id="message" name="Message"></textarea>
-<br><br>
- 
-<button type="submit" id="button" onclick=" showDialog()">Send</button>
-</form>
-<div id="dialogBox" style="display: none;">
-  <div id="dialogContent">
-    <!-- Dialog box content -->
-    <p class="strokeme">
-      Thank You for your message. I'll reach out to you soon!
-    </p>
-    <button onclick="hideDialog()">Okay</button>
+<form id="myForm" onsubmit="submitForm(event)" action="https://formsubmit.co/contact@harishhona.com.np" method="POST">
+      <div class="messagebox">
+          <font size="2">
+              <h1 style="margin:0px;">Send a Raven</h1>
+          </font><br><br>
+          <input type="text" id="name-email" placeholder="Full Name*" name="Name" required><br>
+          <input type="email" id="name-email" placeholder="Email*" name="Email" required>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://harishhona.com.np/contact">
+          <br>
+          <textarea placeholder="Your Message" id="message" name="Message"></textarea>
+          <br><br>
+  
+          <button type="submit" id="button" onclick="submitForm(event)">Send</button>
+      </div>
+  </form>
+  
+  <div id="dialogBox" style="display: none;">
+      <div id="dialogContent">
+          <!-- Dialog box content -->
+          <p class="strokeme">
+              Thank You for your message. I'll reach out to you soon!
+          </p>
+          <button onclick="hideDialog(event)">Okay</button>
+      </div>
   </div>
-</div>
   </center>
 <br><br>
      <center>
@@ -313,17 +317,28 @@ harishhona.com.np/contact<br>
 </div>
 </body>
 <script>
-  function showDialog(event) {
-  event.preventDefault(); // Prevent form submission
-
-  var dialogBox = document.getElementById("dialogBox");
-  dialogBox.style.display = "flex";
-}
-
-function hideDialog() {
-  var dialogBox = document.getElementById("dialogBox");
-  dialogBox.style.display = "none";
-}
+ function submitForm(event) {
+        
+        var form = document.getElementById("myForm");
+        form.submit(); 
+      // Display the dialog box
+      sessionStorage.setItem("displayDialog", "true");
+     
+    }
+    
+    function hideDialog(event) {
+        event.preventDefault(); // Prevent default button behavior
+        document.getElementById("dialogBox").style.display = "none";
+        document.getElementById("name-email").value = ""; // Clear the name and email fields
+        document.getElementById("message").value = ""; // Clear the message field
+    }
+    window.onload = function() {
+        var displayDialog = sessionStorage.getItem("displayDialog");
+        if (displayDialog === "true") {
+            document.getElementById("dialogBox").style.display = "flex";
+        }
+        sessionStorage.removeItem("displayDialog"); // Clear the flag
+    };
 
 </script>
 </html>
