@@ -6,6 +6,7 @@
   <meta name="description" content="I'm Harish Hona : a student, and a developer. Get programming solutions, explore my blogs and projects! Visit my portfolio to learn more.">
   <meta name="keywords" content="Harish Hona, Harish Hona Website, Harish Hona About, Harish Hona Contact">
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
 <link rel="icon" 
@@ -315,7 +316,21 @@ li a:hover {
     position: absolute;
     animation: fade-out 2s linear forwards;
   }
-
+  #goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 16px;
+  background-color:#000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  
+}
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -333,6 +348,7 @@ li a:hover {
       opacity: 0;
     }
   }
+
 </Style>
  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -440,6 +456,27 @@ li a:hover {
     height="45px" width="45px"></a>
   
 </div>
+  
+  <button id="goToTopBtn">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  window.addEventListener('scroll', function() {
+  // Show the button when the user scrolls down a certain amount
+  var scrollToTopButton = document.getElementById('goToTopBtn');
+  if (window.scrollY > 300) {
+      scrollToTopButton.style.display = 'block';
+  } else {
+      scrollToTopButton.style.display = 'none';
+  }
+});
+
+document.getElementById('goToTopBtn').addEventListener('click', function() {
+  // Scroll to the top of the page smoothly
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 <script>
   console.log("No Easter Eggs Here. Go Away!");
   </script>
@@ -454,12 +491,10 @@ li a:hover {
   
   
  <!--Ad-->
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4161457633595246"
-     crossorigin="anonymous"></script>
+
 </body>
 <script>
-    // JavaScript to control the fade-in and fade-out transitions
-  
+   
     const images = document.querySelectorAll('.fade-in img');
   
     // Show the first image initially
@@ -470,21 +505,21 @@ li a:hover {
     function fadeInNextImage() {
       const currentImage = images[currentImageIndex];
   
-      // Hide the current image
+
       currentImage.style.display = 'none';
       currentImage.classList.remove('fade-in');
   
-      // Show the next image
+     
       currentImageIndex = (currentImageIndex + 1) % images.length;
       const nextImage = images[currentImageIndex];
       nextImage.style.display = 'block';
       nextImage.classList.add('fade-in');
   
-      // Schedule the next fade-in after fade-out completes
-      setTimeout(fadeInNextImage, 2800); // Adjust the delay (in milliseconds) as needed
+      
+      setTimeout(fadeInNextImage, 2800);
     }
   
     // Start the fade-in transition
-    setTimeout(fadeInNextImage, 2800); // Adjust the delay (in milliseconds) as needed
+    setTimeout(fadeInNextImage, 2800);
   </script>
 </html>
