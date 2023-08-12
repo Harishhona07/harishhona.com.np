@@ -174,6 +174,21 @@ li a:hover {
   border-radius : 7px;
 
 }
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 16px;
+  background-color:#000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  
+}
 
   </style>
 </head>
@@ -341,7 +356,26 @@ harishhona.com.np/portfolio<br>
     height="45px" width="45px"></a>
   
 </div>
+<!--Go to Top Button-->
+  <button id="goToTopBtn">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+  window.addEventListener('scroll', function() {
+  // Show the button when the user scrolls down a certain amount
+  var scrollToTopButton = document.getElementById('goToTopBtn');
+  if (window.scrollY > 300) {
+      scrollToTopButton.style.display = 'block';
+  } else {
+      scrollToTopButton.style.display = 'none';
+  }
+});
 
+document.getElementById('goToTopBtn').addEventListener('click', function() {
+  // Scroll to the top of the page smoothly
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
 </body>
 
