@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akash Bade</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500&family=Nunito+Sans:ital,opsz,wght@1,6..12,200&family=Rubik&display=swap');
+
+  * {
+    font-family: 'Manrope', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Rubik', sans-serif;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .intro {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+    color: #777;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .project {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .project p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Additional styles for headings */
+  .section-heading {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  footer{
+    background-color: rgb(0, 97, 26);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    height:80px;
+  }
+  #description {
+    font-size: medium;
+    text-align: justify;
+    padding: 40px;
+    line-height: 1.5;
+    background-color: lightgrey;
+    
+  }
+  #image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  }
+  #image :hover {
+    transform: scale(1.1);
+  }
+  #nav {
+    font-size: larger;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(93, 93, 179);
+  }
+  #nav:hover {
+    text-decoration: underline;
+  }
+  #link {
+    color : red;
+    text-decoration: none;
+  }
+  #link:hover {
+    text-decoration: underline;
+  }
+  #line {
+    background-color: black;
+    height: 0.3px;
+  }
+.interviews {
+  padding:10px;
+}
+@media (max-width: 700px) {
+  iframe {
+    height: 280px;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Akash Bade</h1>
+    <p>
+      Director, <a id="link" href="www.mushroomnepal.com">Mushroom Seed Nepal & Research Center</a>
+</p>
+<div id="line"></div><br>
+    <a id ="nav" href="#aboutme">About Me</a>
+    <a id ="nav" href="#portfolio">Portfolio</a>
+    <a id ="nav" href="#interviews">Interviews</a>
+    <a id="nav" href="#contact">Contact</a>
+  </header>
+
+  <h1 class="section-heading">About Me</h1>
+  <img id="image" src="C:\Users\acer\Downloads\akash-bade.jpg" width="40%" height="30%">
+<a name="aboutme">
+  <div class="intro">
+    <h3>Hello, I'm Akash Bade</h3>
+    <p id="description">
+      I founded <b>Mushroom Seed Nepal and Research Center</b> to make native mushrooms 
+      suitable for production. We were testing the mushrooms produced in Nepal to
+       make them suitable for cultivation. We have been successful in doing so.
+        With this organization, I want to promote agriculture and mushroom farming 
+        in the context of Nepal.
+    </p>
+  </div>
+</a>
+<a name="portfolio">
+  <h2 class="section-heading">Portfolio</h2>
+
+  <div class="portfolio">
+    <div class="project">
+      <img src="C:\Users\acer\Downloads\msn-logo.png"> 
+  
+      <h3>Mushroom Seed Nepal & Research Center</h3>
+      <p>Nepal's leading Mushroom Seed Supplier and Manufacturer.</p>
+    </div>
+
+    <div class="project">
+      <img src="C:\Users\acer\Downloads\reishimush.jpg">
+      <h3>Mushroom Farming & Cultivation</h3>
+      <p>Oyster, Reishi, Siitake and Button Mushroom Farming in Nepal.</p>
+    
+    </div>
+
+  </div>
+  </a>
+<a name="interviews">
+  <h2 class="section-heading">Interviews</h2>
+  </a>
+  <div class="interviews">
+  <iframe width="100%" height = "500" src="https://www.youtube.com/embed/Dg5m0aXFg4A"
+   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+   allowfullscreen></iframe>
+   </div>
+
+  <footer>
+ <div class="footer-content" style="color:grey;">
+  <h4>Akash Bade | Mushroom Seed Nepal & Research Center</h4>
+  <h5>Copyright 2023 Akash Bade. <br>All Rights Reserved.</h5>
+ </div>
+  </footer>
+</body>
+<script>
+
+</script>
+</html>
