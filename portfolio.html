@@ -192,7 +192,36 @@ li a:hover {
   cursor: pointer;
   
 }
+.quicklink-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #fff; /* White border */
+    color: #fff; /* White text color */
+    background-color: #fff; /* White background color */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    color: black;
+    font-family: 'Quicksand';
+    animation: slideDownBtn 1s;
+  }
 
+  /* Change styles on hover */
+  .quicklink-btn:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: #fff; /* White text color on hover */
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+  }
+  @media (max-width:700px) {
+    .quicklink-btn {
+        font-size: 15px;
+    }
+    
+  }
   </style>
 </head>
 
