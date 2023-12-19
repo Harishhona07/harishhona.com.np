@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +29,7 @@ body{
      color: white;
      animation-name: slide-down;
      animation-duration: 1s;
-     position: relative;
+     position: relative;    
     }
   ul {
   list-style-type: none;
@@ -206,6 +209,10 @@ li a:hover {
 <!--Content-->
 <div class="header">
 <H1>Portfolio</h1>
+    <!--Quick Link Buttons-->
+    <button class="quicklink-btn" data-target="education">Education</button>
+    <button class="quicklink-btn" data-target="work-experience">Work Experience</button>
+    <button class="quicklink-btn" data-target="projects">Projects</button>
   </div>
 <BR>
 <center>
@@ -227,6 +234,7 @@ Download CV
 </div>
 <br><br><br>
 <!--Education-->
+<section id="education">
 <div class="background">
     <div id="text">
     <u><h2>Education</h2></u>
@@ -261,8 +269,10 @@ Download CV
     
     </div>
     </div>
+    </section>
 <br><br><br>
 <!--Work Experience-->
+<section id="work-experience">
 <div class="background">
     <div id="text">
     <u><h2>Work Experience</h2></u>
@@ -286,8 +296,9 @@ Download CV
     
     </div>
     </div>
+    </section>
     <br><br><br>
-
+<section id="projects">
 <div class="background">
   <u><h2>My Works & Projects</h2></u>
   <br><br>
@@ -365,6 +376,7 @@ Download CV
    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
 </div>
+</section>
 </center>
 
 <Br><br><br><br>
@@ -420,7 +432,22 @@ document.getElementById('goToTopBtn').addEventListener('click', function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-
+<script>
+    $(document).ready(function() {
+      $(".quicklink-btn").click(function() {
+        var target = $(this).data("target");
+        var targetOffset = $("#" + target).offset().top;
+  
+        $("html, body").animate(
+          {
+            scrollTop: targetOffset
+          },
+          1000 // Adjust the duration as needed
+        );
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
