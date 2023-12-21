@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
@@ -20,6 +19,9 @@
 body{
     font-family: Quicksand, Sans-Serif;
   }
+* {
+    scroll-behavior: smooth;
+}
 
 .header { 
      padding: 10px;
@@ -239,9 +241,9 @@ li a:hover {
 <div class="header">
 <H1>Portfolio</h1>
     <!--Quick Link Buttons-->
-    <button class="quicklink-btn" data-target="education">Education</button>
-    <button class="quicklink-btn" data-target="work-experience">Work Experience</button>
-    <button class="quicklink-btn" data-target="projects">Projects</button>
+       <a href="#education"><button class="quicklink-btn">Education</button></a>
+    <a href="#work-experience"><button class="quicklink-btn">Work Experience</button></a>
+    <a href="#projects"><button class="quicklink-btn">Projects</button></a>
   </div>
 <BR>
 <center>
@@ -461,21 +463,7 @@ document.getElementById('goToTopBtn').addEventListener('click', function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-<script>
-    $(document).ready(function() {
-      $(".quicklink-btn").click(function() {
-        var target = $(this).data("target");
-        var targetOffset = $("#" + target).offset().top;
-  
-        $("html, body").animate(
-          {
-            scrollTop: targetOffset
-          },
-          1000 // Adjust the duration as needed
-        );
-      });
-    });
-  </script>
+
   
 </body>
 
