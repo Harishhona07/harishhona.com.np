@@ -1,565 +1,516 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harish Hona</title>
 
-<head>
-  <meta name="description" content="I'm Harish Hona : a student, and a developer. Get programming solutions, explore my blogs and projects! Visit my portfolio to learn more.">
-  <meta name="keywords" content="Harish Hona, Harish Hona Website, Harish Hona About, Harish Hona Contact">
-  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
-<link rel="icon" 
-     type="image/png" 
-     href="images/logo.jpg">
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
 
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- favicons
+    ================================================== -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-
-
-<Title>Harish Hona</title>
-<Style>
- @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-body{
-background-image:url('https://i.ibb.co/BfVgMPD/received-1030575290982824.webp');
-background-size:auto;
-font-family: Quicksand, sans-serif;
-}
-
-  .invitation{
-    background-color: lightgray;
-    padding: 15px;
-    width: 60%;
-    color: black;
-    font-size: large;
-    border-radius: 5px;
-            }
-
-.inviteBtn {
-    background-color:black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    font-weight: bold;  
-    margin-bottom: 5px;   
-    font-size: small;   
-    color: whitesmoke;
-    border-width: 1px;
-    border-radius: 50px;
-            }
-.inviteBtn:hover {
-    background-color: rgb(2, 204, 2);
-  
-            }
-
-/*Pre-Loader*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000000 url('images/preloader.gif') no-repeat center center;
-  z-index: 9999999;
-}
-/*Open Animation*/
-.container-word{
-    position:relative;
-    text-align:center;
-    font-family:Quicksand;
-  
-}
-.title {
-  font-family: "Quicksand",
-  sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  position:relative;
-}
-
-.title-word {
-  animation: color-animation 5s linear infinite;
-  position:relative;
-  
-}
-
-.title-word-1 {
-  --color-1: white;
-  --color-2: transparent;
-  --color-3: transparent;
-  
-  
-}
-
-.title-word-2 {
-   
-  --color-1: transparent;
-  --color-2: white;
-  --color-3: transparent;
-}
-
-.title-word-3 {
-  --color-1: transparent;
-  --color-2: transparent;
-  --color-3: white;
-}
-
-
-
-@keyframes color-animation {
-  0%    {color: var(--color-1)
-         opacity: 0;
-  }     
-  15%   {color: var(--color-1)    
-  }
-  30%   {color: var(--color-2)
-        opacity: 0;
-  }
-  45%   {color: var(--color-2)
-       
-  }
-  60%   {color: var(--color-3)
-         opacity: 0;
-  }
-  75%   {color: var(--color-3)
-  
-        
-  }
-   
-
-
-  
-}
-/*Close Animation*/
-.rotate-logo {
-    animation: rotation 1s infinite;
-    animation-delay: 2.8s;
-    animation-duration: 2.8s;
-  
-  }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes fade-in {
-    from {
-    opacity: 0;
-    }
-    to {
-    opacity: 1;
-    }
-}
-
-.fade-in {
-  animation-name: fade-in;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-}
-
-.footer {
-    background-color:black;
-  padding: 20px;
-  text-align: center;
-  bottom: 0;
-}
-  /*Bottom Navigation*/
-#bottomnav{
-  padding: 10px;
-  word-spacing: 20px;
-  
-}
-#bottomnav a{
-  text-decoration: none;
-  color:dodgerblue;
-  
-}
-#bottomnav a:hover{
-  text-decoration: underline;
-}
-
-@media only screen and(max-width:800px){
-
-.footer {
-  background-color:black;
-  padding: 20px;
-  text-align: center;
-}
-
-}
-
-/*Nav Bar*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-li a:hover {
-  background-color: #111;
-  border-radius: 10px;
-  transform: scale(1.05); 
-}
-#navlogo {
-   position: absolute;
-    top: 8px;
-    right: 20px;  
-}
-#active{
-    background-color:green;
-    border-radius: 10px;
-   }
-.banner{
-    background-color:lightgrey;
-    padding:20px;
-    color:black;
-    text-align:center;   
-    padding-top:10px;
-    
-    
-    
-}
-#banner:link, #banner:visited{
-    text-decoration: none;
-    color:black;
-    
-}
-
-@media(min-width: 600px){
-    #h1{
-        font-size: 42pt;
-    }
-    #h2{
-        font-size: 15pt;
-    }
-    table{
-        background-color: black;
-        padding: 1px;
-    }
-   
-}
-#title1 {
-    height: 15%;
-    width: 40%;
-}
-#title2 {
-    height: 10%;
-    width: 40%;
-}
-#title3 {
-    height: 15%;
-    width: 45%;
-}
-  @media(max-width: 800px){
-    #bottomnav{
-    font-size: 14px;
-   }
-    #navlogo{
-    position: absolute;
-    top: 8px;
-    right: 20px;
-   }
-    .fade-in img{
-        height: 10%;
-        width:60%;
-     }
-     #title1{
-      height: 60px;
-      width: 60%;
-     }
-     #title2 {
-      height: 40px;
-      width: 60%;
-     }
-     #title3 {
-      height: 40px;
-      width: 60%;
-     }   
-    
-    
-     
-    
-  }
-
-#mail {
-  color:#FFCCCB;
-  text-decoration: none;
-}
-.fade-in img {
-    position: absolute;
-    animation: fade-in 2s linear forwards;
-  }
-
-  .fade-out img {
-    position: absolute;
-    animation: fade-out 2s linear forwards;
-  }
-  #goToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  font-size: 16px;
-  background-color:#000000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  
-}
-  /*Social Links*/
-.social-links {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    font-size: 50px;
-
-}
-
-.social-links i {
-    justify-content: space-between;
-    color: black;
-}
-
-.social-links #fb:hover {
-    color:  #316FF6;
-    transition: 0.3s ease;
-    transform: translateY(-5px);
-
-}
-.social-links #insta:hover {
-    color:  #833AB4;
-    transition: 0.3s ease;
-    transform: translateY(-5px);
-}
-.social-links #yt:hover {
-    color: red;
-    transition: 0.3s ease;
-    transform: translateY(-5px);
-
-}
-.social-links #linkedin:hover {
-    color:  #0077b5;
-    transition: 0.3s ease;
-    transform: translateY(-5px);
-}
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-</Style>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
- <div id="preloader"></div>
-<ul>
-  <li><a id="active" href="#home">Home</a></li>
-  <li><a href="/portfolio">Portfolio</a></li>
-  <li><a href="/blog">Blog</a></li>
-  <li><a href="/contact">Contact</a></li>
-  <li><img src="images/logo.jpg" id="navlogo" height="25px" width="25px" style="padding:9px;"></li>
-</Ul>
-  
-  <!-- NORMAL MAIN TITLE COMMENTED OUT
-   <div class="fade-in">
-    
-<font size="5" color="white">
-<h1 align="center" id="h1" style=" text-shadow: 4px 4px black">
-    HARISH HONA
-</h1>
-</Font>
-  </div>
--->
-  <br><br><br>
-<center>
-    <div class="fade-in" style="display: flex; justify-content: center; align-items: center;">
-        <img src="images/title-logo.png" id="title1">
-        <img src="images/titlelogogot.png" style="display: none;" id="title2">
-        <img src="images/title-logo-pb.png" style="display:none;" id="title3">
+  <body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-<br><br><br>
-  <a href="https://harishhona.com.np"><img src="https://harishhona.com.np/images/logo.jpg"
-                                           height="70px" width="70px" class="rotate-logo"></a></center>
-<div class="container-word">
-  <h2 class="title">
-    <span class="title-word title-word-1">Student,</span><br>
-    <span class="title-word title-word-2">Rookie Developer,</span><br>
-    <span class="title-word title-word-3">Cinephile</span>
- 
-  </h2>
-</div>
-
-<br>
-<Font size="2" color="white">
-<h2 align="center" id="h2">Bhaktapur | Nepal</h2>
-<br><br><br>
-  <br>
-<!--Freelance-->
-<center>
-    <div class="invitation">
-   <h5>&#10003 Available for Freelancing</h5>
-  <a href="https://www.upwork.com/ab/flservices/workwith/harishh3" target="_blank">
-  <button class="inviteBtn">Work With Me</button></a>
     </div>
-</center>
-<br><br><br><br>
-<!--Social Links-->
- <div class="social-links">
-    <center>
-      
-       <a style="text-decoration:none;" href="https://www.facebook.com/harishhona07"> <i id="fb" class="fa-brands fa-facebook" style="font-size: 25px; color:white"></i>   </a>
-       <a style="text-decoration:none;" href="https://www.instagram.com/harishhona7"><i id="insta" class="fa-brands fa-instagram" style="font-size: 25px; color:white"></i></a>
-       <a style="text-decoration:none;" href="https://www.youtube.com/@harishhona"> <i id="yt"class="fa-brands fa-youtube" style="font-size: 25px; color:white"></i></a>
-       <a style="text-decoration:none;" href="https://www.linkedin.com/in/harish-hona"> <i id="linkedin"class="fa-brands fa-linkedin" style="font-size: 25px; color:white"></i></a>
-    </center>
-    
 
-</div>
-<br><br>
-  <center>
-  <h3>Get Solutions Here:</h3><br>
-  <h3><a href="https://code.harishhona.com.np" id="bottomnav">code.harishhona.com.np</a></h3>
-  </center>
-<Br><br><br><br><br><br><br><br><br><br>
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header">
+        <div class="row s-header__inner">
+          <div class="s-header__block">
+            <div class="s-header__logo">
+              <a class="logo" href="index.html">
+                <img
+                  src="https://harishhona.com.np/images/logo.jpg"
+                  alt="Harish Hona"
+                  width="50px"
+                />
+              </a>
+            </div>
 
+            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+          </div>
+          <!-- end s-header__block -->
 
+          <nav class="s-header__nav">
+            <ul class="s-header__menu-links">
+              <li class="current">
+                <a class="smoothscroll" href="#home">Home</a>
+              </li>
+              <li><a class="smoothscroll" href="#about">About</a></li>
+              <li><a class="smoothscroll" href="#contact">Contact</a></li>
+              <li>
+                <a href="https://harishhona.com.np/portfolio">Portfolio</a>
+              </li>
+            </ul>
+            <!-- s-header__menu-links -->
+          </nav>
+          <!-- end s-header__nav -->
+        </div>
+        <!-- end s-header__inner -->
+      </header>
+      <!-- end s-header -->
 
+      <!-- # intro
+        ================================================== -->
+      <section id="home" class="s-intro target-section">
+        <div class="row s-intro__content width-sixteen-col">
+          <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+            <div class="s-intro__content-text">
+              <div
+                class="s-intro__content-pretitle text-pretitle"
+                id="text-sequence"
+              >
+                HELLO
+              </div>
+              <h1 class="s-intro__content-title">
+                <span id="title1">I'm HARISH HONA.</span>
+                <span id="title2">Web Developer</span>
+                <span id="title3">Bhaktapur | Nepal</span>
+              </h1>
 
+              <div class="s-intro__content-btns">
+                <a class="smoothscroll btn" href="#about">About Me</a>
+              </div>
+              <!-- s-intro__content-btns -->
+            </div>
+            <!-- s-intro__content-text -->
+          </div>
+          <!-- s-intro__content-inner -->
+        </div>
+        <!-- s-intro__content -->
 
-<br><br><br><br><br><br><br>
-  
-<Br><br><br>
-<div class="footer">
-  <b>
-  <font color="grey" size=2>
-  harishhona.com.np/home<br>
-  © 2024 Harish Hona<br>
-  Email ✉️: <a href = "mailto: contact@harishhona.com.np" id="mail">contact@harishhona.com.np</a><br><br>
-    </b>
- <table align="center" width="150px">
-<tr>
-<td><a href="https://www.facebook.com/harishhona07" target="_blank"><i class="fa fa-facebook" style="font-size:25px; color:white;"></i></a></td>
-<td><a href="https://www.instagram.com/harishhona7" target="_blank"><i class="fa fa-instagram" style="font-size:29px; color:white;"></i></a></td>
-<td><a href="https://twitter.com/harish_hona" target="_blank"><i class="fa fa-twitter" style="font-size:29px; color:white;"></i></a></td>
-</tr>
-</table>
-    <!--Borrom Navigation-->
- <p style="color:white;" id="line">⸺⸺⸺⸺⸺⸺⸺⸺⸺⸺⸺⸺⸺⸺⸺</p>
- <div id="bottomnav">
-  <b>
- <a href="/portfolio">Portfolio</a>
- <a href="/blog">Blog</a>
- <a href="/contact">Contact</a>
-</b>
-</div><br><br>
- 
- <a href="https://harishhona.com.np"><img src="images/logo.jpg"
-    height="45px" width="45px"></a>
-  
-</div>
-  
-  <button id="goToTopBtn">
-  <i class="fas fa-arrow-up"></i>
-</button>
+        <ul class="s-intro__social social-list">
+          <li>
+            <a href="https://www.facebook.com/harishhona07" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+              <span class="u-screen-reader-text">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/harishhona7/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+              <span class="u-screen-reader-text">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@harishhona" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+              <span class="u-screen-reader-text">Youtube</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/harish-hona/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+              <span class="u-screen-reader-text">LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Harishhona07" target="_blank">
+              <i class="fa-brands fa-github"></i>
+              <span class="u-screen-reader-text">Github</span>
+            </a>
+          </li>
+        </ul>
+        <!-- end s-intro__social -->
 
-<script>
-  window.addEventListener('scroll', function() {
-  // Show the button when the user scrolls down a certain amount
-  var scrollToTopButton = document.getElementById('goToTopBtn');
-  if (window.scrollY > 300) {
-      scrollToTopButton.style.display = 'block';
-  } else {
-      scrollToTopButton.style.display = 'none';
-  }
-});
+        <div class="s-intro__content-media">
+          <img src="https://harishhona.com.np/images/logo.jpg" alt="" />
+        </div>
+        <!-- s-intro__content-media -->
 
-document.getElementById('goToTopBtn').addEventListener('click', function() {
-  // Scroll to the top of the page smoothly
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
-<script>
-  console.log("No Easter Eggs Here. Go Away!");
-  </script>
-  
-  <script> 
-    //Pre-Loader
-   setTimeout(function() {
-      const preloader = document.getElementById('preloader');
-      preloader.style.display = 'none';
-    }, 700);
-  </script>
-  
-  
- <!--Ad-->
+        <div class="s-intro__btn-download">
+          <a
+            class="btn btn--stroke"
+            href="./Resume - Harish Hona.pdf"
+            target="_blank"
+            >Download Resume</a
+          >
+        </div>
+        <!-- end s-intro__btn-download -->
 
-</body>
-<script>
-   
-    const images = document.querySelectorAll('.fade-in img');
-  
-    // Show the first image initially
-    images[0].style.display = 'block';
-  
-    let currentImageIndex = 0;
-  
-    function fadeInNextImage() {
-      const currentImage = images[currentImageIndex];
-  
+        <div class="s-intro__scroll-down">
+          <a href="#about" class="smoothscroll">
+            <div class="scroll-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1)"
+              >
+                <path
+                  d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                ></path>
+              </svg>
+            </div>
+            <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+          </a>
+        </div>
+        <!-- s-intro__scroll-down -->
+      </section>
+      <!-- end s-intro -->
 
-      currentImage.style.display = 'none';
-      currentImage.classList.remove('fade-in');
-  
-     
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-      const nextImage = images[currentImageIndex];
-      nextImage.style.display = 'block';
-      nextImage.classList.add('fade-in');
-  
-      
-      setTimeout(fadeInNextImage, 2800);
-    }
-  
-    // Start the fade-in transition
-    setTimeout(fadeInNextImage, 2800);
-  </script>
+      <!-- # about
+        ================================================== -->
+      <section id="about" class="s-about target-section">
+        <div class="row s-about__content">
+          <div class="column xl-12">
+            <div class="section-header" data-num="?">
+              <h2 class="text-display-title">About Me.</h2>
+              <img
+                src="./images/Harish-Hona.png"
+                alt="Harish Hona"
+                width="200px"
+              />
+            </div>
+            <!-- end section-header -->
+            <p class="attention-getter">
+              I'm Harish Hona, a dedicated and passionate learner with a diverse
+              skill set and substantial experience across multiple domains. My
+              journey has equipped me with a deep understanding and hands-on
+              expertise in Web Development, SEO, Video Editing, Digital
+              Marketing and Freelancing. With these stacks, I can bring a unique
+              blend of technical expertise and creative insight that can
+              significantly enhance your company's digital presence and project
+              outcomes.
+            </p>
+
+            <div class="grid-list-items s-about__blocks">
+              <div class="grid-list-items__item s-about__block">
+                <h4 class="s-about__block-title">Experience</h4>
+                <ul class="s-about__list">
+                  <li>
+                    <img
+                      width="25px"
+                      height="25px"
+                      src="https://media.licdn.com/dms/image/D4D0BAQFBFEMo8tFbTA/company-logo_200_200/0/1700560088733?e=2147483647&v=beta&t=b0la7vLZD6tDEpebEv_fLTwsfaG78HKaUo9JlDTokDM"
+                      alt=""
+                    />
+
+                    <a href="https://mushroomnepal.com/" target="_blank">
+                      Mushroom Seed Nepal and Research Center
+                      <span>Webmaster and Editor</span>
+                      <span>2023 - Present</span>
+                    </a>
+                  </li>
+                  <li>
+                    <img src="images/upwork logo.jpg" alt="" />
+
+                    <a href="https://www.upwork.com/" target="_blank">
+                      Upwork Freelance
+                      <span>Video Editor</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!--end s-about__block -->
+
+              <div class="grid-list-items__item s-about__block">
+                <h4 class="s-about__block-title">Education</h4>
+
+                <ul class="s-about__list">
+                  <li>
+                    <img
+                      width="25px"
+                      height="25px"
+                      src="https://samriddhicollege.edu.np/wp-content/uploads/2020/03/samriddhi-college-logo-nepal.jpg"
+                      alt=""
+                    />
+
+                    <a href="https://samriddhicollege.edu.np/" target="_blank">
+                      Samriddhi College (TU)
+                      <span>Bachelor in Computer Application (BCA)</span>
+                      <span>2023 - Present</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <img
+                      width="25px"
+                      height="25px"
+                      src="https://play-lh.googleusercontent.com/k89khosHc6eFi_OnEMkTT0zvYk-AuGhmdd4XDMZxzfZNhCFbCoXHhlm3nBstrgXG35Y"
+                      alt=""
+                    />
+
+                    <a href="https://www.khwopahss.edu.np/" target="_blank">
+                      Khwopa Secondary School
+                      <span>+2 Level</span>
+                      <span>2021 - 2023</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <img
+                      width="25px"
+                      height="25px"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpPaUG6K-HIwfldgQsFJV6QKtxRajgbssj4Q&s"
+                      alt=""
+                    />
+
+                    <a
+                      href="https://www.facebook.com/himchuliacademy/"
+                      target="_blank"
+                    >
+                      Himchuli Academy
+                      <span>Secondary Level (SEE)</span>
+                      <span>Batch 2020</span>
+                    </a>
+                  </li>
+
+                  <li></li>
+                </ul>
+              </div>
+              <!--end s-about__block -->
+
+              <div class="grid-list-items__item s-about__block">
+                <h4 class="s-about__block-title">Skills</h4>
+
+                <ul class="s-about__list skills__list">
+                  <li>
+                    Web Development
+                    <span>HTML, CSS, JAVASCRIPT, SEO</span>
+                  </li>
+                  <li>
+                    Digital Marketing
+                    <span>SEO, Graphic Design, Social Media Ads</span>
+                  </li>
+                  <li>
+                    Video Editing
+                    <span></span>
+                  </li>
+                </ul>
+              </div>
+
+              <!--end s-about__block -->
+            </div>
+
+            <!-- grid-list-items -->
+          </div>
+
+          <!--end column -->
+        </div>
+
+        <!--end s-about__content -->
+      </section>
+      <!-- end s-about -->
+
+      <!-- # footer 
+        ================================================== -->
+      <section id="contact" class="s-footer target-section">
+        <div class="row">
+          <div class="column lg-12">
+            <div class="section-header light-on-dark" data-num="/">
+              <h2 class="text-display-title">Get In Touch.</h2>
+            </div>
+            <!-- end section-header -->
+          </div>
+        </div>
+
+        <div class="row s-footer__content">
+          <div class="column xl-10 md-12 s-footer__block s-footer__about">
+            <div class="field1">
+              <div class="field">
+                <div class="form__group field">
+                  <input
+                    type="input"
+                    class="form__field"
+                    placeholder="Name"
+                    required=""
+                  />
+                  <label for="name" class="form__label">Name</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="form__group field">
+                  <input
+                    type="input"
+                    class="form__field"
+                    placeholder="Email Address"
+                    required=""
+                  />
+                  <label for="name" class="form__label">Email Address</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="form__group">
+                  <input
+                    type="input"
+                    class="form__field"
+                    placeholder="Subject"
+                    required=""
+                  />
+                  <label for="subject" class="form__label">Subject</label>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="form__group">
+                <textarea
+                  name=""
+                  id=""
+                  class="form__field"
+                  placeholder="Message"
+                ></textarea>
+                <label for="subject" class="form__label">Message</label>
+              </div>
+
+              <div class="tab-12">
+                <a
+                  href="mailto:#0"
+                  class="btn btn--primary btn--large u-fullwidth"
+                  >Send Message</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- end section-footer__about -->
+        </div>
+        <!-- end section-footer__content -->
+        <!-- end section-footer__buttons -->
+
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <ul class="s-footer__social social-list">
+              <li>
+                <a href="https://www.facebook.com/harishhona07" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span class="u-screen-reader-text">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/harishhona7/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  <span class="u-screen-reader-text">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@harishhona" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                  <span class="u-screen-reader-text">Youtube</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/harish-hona/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span class="u-screen-reader-text">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Harishhona07" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                  <span class="u-screen-reader-text">Github</span>
+                </a>
+              </li>
+            </ul>
+            <a href="mailto:contact@harishhona.com.np"
+              >contact@harishhona.com.np</a
+            >
+          </div>
+          <!-- end section-footer__social -->
+
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>© 2024 Harish Hona</span>
+              <span>All rights reserved.</span>
+            </p>
+          </div>
+        </div>
+        <!-- end section-footer__bottom -->
+
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1)"
+            >
+              <path
+                d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"
+              ></path>
+            </svg>
+          </a>
+          <span>Back To Top</span>
+        </div>
+        <!-- end ss-go-top -->
+      </section>
+      <!-- end s-footer -->
+    </div>
+    <!-- end page-wrap -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const texts = [
+          "Hello",
+          "Hola",
+          "Bonjour",
+          "Hallo",
+          "Ciao",
+          "你好",
+          "こんにちは",
+          "Привет",
+          "Namaste",
+          "مرحبا",
+          "Jojolapa",
+          "<Hello World!/>",
+        ];
+        const element = document.getElementById("text-sequence");
+        let index = 0;
+
+        const displayNextText = () => {
+          if (index < texts.length) {
+            element.textContent = texts[index];
+            index++;
+            if (index < texts.length) {
+              setTimeout(displayNextText, 150); // Change text every 1 second
+            }
+          }
+        };
+
+        setTimeout(displayNextText, 2000);
+      });
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
