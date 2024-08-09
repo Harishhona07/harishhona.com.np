@@ -3171,6 +3171,10 @@ td:last-child {
   transition-property: color, background-color;
 }
 
+.s-header__menu-links a:hover {
+  color: white;
+}
+
 .s-header__menu-links .current a {
   color: white;
 }
