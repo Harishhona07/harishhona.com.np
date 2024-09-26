@@ -3927,6 +3927,7 @@ td:last-child {
   .s-intro {
     --content-padding-top: max(10rem, 10vh);
   }
+
 }
 
 /* ===================================================================
@@ -4502,6 +4503,146 @@ textarea {
   fill: white;
 }
 
+.certificates {
+  width: 100%;
+
+}
+
+.certificates_title {
+  margin-top: 0;
+  margin-bottom: var(--vspace-1);
+  padding-left: 1.45rem;
+  position: relative;
+  color: black;
+
+}
+
+.certificates_title::before {
+  content: "";
+  height: 0.7em;
+  width: 3px;
+  background-color: var(--color-1);
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.certificate-counter {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.certificate-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.next-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.next-prev:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+.certificate-slider {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.certificate {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.certificate-details img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cer-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.cer-company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cer-company img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cer-detail h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.cer-detail button {
+  width: 50%;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.cer-detail button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * footer
@@ -4581,6 +4722,36 @@ textarea {
 @media screen and (max-width: 400px) {
   .ss-go-top {
     right: -2rem;
+  }
+
+  .certificate-details {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .certificate-details img {
+    width: 100%;
+  }
+
+  .certificate-details .company-logo {
+    width: auto;
+  }
+
+  .cer-detail {
+    margin-top: 20px;
+  }
+
+  .cer-detail button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .cer-company {
+    gap: 1px;
+  }
+
+  .next-prev {
+    top: 25%;
   }
 }
 

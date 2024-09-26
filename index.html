@@ -323,6 +323,22 @@
               <!--end s-about__block -->
             </div>
 
+            <div class="certificates">
+              <h4 class="certificates_title">Certifications</h4>
+              <div id="certificateCounter" class="certificate-counter">1</div>
+              <div class="certificate-content">
+                <button class="next-prev" id="prevBtn">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="certificate-slider" id="certificateSlider">
+                  <!-- Certificate content will be dynamically inserted here -->
+                </div>
+                <button class="next-prev" id="nextBtn">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
             <!-- grid-list-items -->
           </div>
 
@@ -526,6 +542,93 @@
 
         setTimeout(displayNextText, 2000);
       });
+
+      //Certification
+      const certificates = [
+        {
+          title: "Introduction to Front End Development",
+          company: "Meta",
+          image:
+            "https://media.licdn.com/dms/image/v2/D562DAQGWtChbjYmRYQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727091917440?e=1727964000&v=beta&t=3hkf6rLUVnH-JNeQ-fPt8wLcZmjMG3CZ-81hQiRtuk4",
+          companyLogo:
+            "https://cdn.pixabay.com/photo/2021/12/14/22/29/meta-6871457_1280.png",
+          credential:
+            "https://www.coursera.org/account/accomplishments/verify/DOHOAK758BK2",
+        },
+        {
+          title: "Intra-College Hackathon 2024",
+          company: "Samriddhi IT Club",
+          image:
+            "https://media.licdn.com/dms/image/v2/D562DAQGqXhxfamTRlw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1725378257403?e=1727964000&v=beta&t=4wNvQJOVbYaqmMv146OM-Zbb7TttVxsjx1V_5ZfrQG4",
+          companyLogo:
+            "https://scontent.fktm6-1.fna.fbcdn.net/v/t39.30808-6/449617732_122160605486191422_5153500149863214750_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=XgAe4GpIKB0Q7kNvgEbU0lv&_nc_ht=scontent.fktm6-1.fna&oh=00_AYDg3nFsxDt7pYbbROucehhDSjEjPx2jSaJ0nQEdIDvd3A&oe=66FB2084",
+          credential:
+            "https://www.linkedin.com/in/harish-hona/details/certifications/",
+        },
+        {
+          title: "Linux Fundamentals",
+          company: "Red Hat Academy",
+          image:
+            "https://media.licdn.com/dms/image/v2/D562DAQFoKy2B4qAZTA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727252873641?e=1727964000&v=beta&t=Bw5CrfHtWaavzPixhRrW_jT50BvEX3n0Rptiuw8ZmVY",
+          companyLogo: "https://image.pngaaa.com/972/6017972-middle.png",
+          credential:
+            "https://www.linkedin.com/in/harish-hona/details/certifications/",
+        },
+        {
+          title: "Responsive Web Design",
+          company: "FreeCodeCamp",
+          image:
+            "https://media.licdn.com/dms/image/v2/D562DAQHJPugR-B7wPg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727358578330?e=1727964000&v=beta&t=vqt0jyOFdknY328_vNtR0XiLNdP1pbfLFL6sxGPdNCs ",
+          companyLogo:
+            "https://static-00.iconduck.com/assets.00/freecodecamp-icon-1024x1024-yjx94eq2.png",
+          credential:
+            "https://www.freecodecamp.org/certification/harishhona/responsive-web-design",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function createCertificateHTML(certificate) {
+        return `
+                <div class="certificate">
+                    <div class="certificate-details">
+                        <img src="${certificate.image}" alt="${certificate.title}">
+                        <div class="cer-detail">
+                            <h2>${certificate.title}</h2>
+                            <div class="cer-company">
+                                <img class="company-logo" src="${certificate.companyLogo}" alt="${certificate.company}">
+                                <p>${certificate.company}</p>
+                            </div>
+                            <a href="${certificate.credential}" target="_blank"><button>Show Credential</button></a>
+                        </div>
+                    </div>
+                </div>
+            `;
+      }
+
+      function updateSlider() {
+        const slider = document.getElementById("certificateSlider");
+        slider.innerHTML = certificates.map(createCertificateHTML).join("");
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update the counter
+        const counter = document.getElementById("certificateCounter");
+        counter.textContent = `${currentIndex + 1} / ${certificates.length}`;
+      }
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        currentIndex =
+          (currentIndex - 1 + certificates.length) % certificates.length;
+        updateSlider();
+      });
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % certificates.length;
+        updateSlider();
+      });
+
+      // Initial update
+      updateSlider();
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
