@@ -1554,6 +1554,38 @@ hr.fancy::before {
   }
 }
 
+@media screen and(max-width: 590px) {
+  .certificate-details {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .certificate-details img {
+    width: 100%;
+  }
+
+  .certificate-details .company-logo {
+    width: 100px;
+  }
+
+  .cer-detail {
+    margin-top: 20px;
+  }
+
+  .cer-detail button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .cer-company {
+    gap: 1px;
+  }
+
+  .next-prev {
+    top: 25%;
+  }
+}
+
 .pull-quote {
   position: relative;
   padding: 0;
@@ -4725,6 +4757,12 @@ textarea {
 }
 
 @media screen and (max-width: 400px) {
+  .ss-go-top {
+    right: -2rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
   .ss-go-top {
     right: -2rem;
   }
