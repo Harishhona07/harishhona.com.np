@@ -4622,8 +4622,8 @@ textarea {
 }
 
 .cer-company img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -4739,7 +4739,7 @@ textarea {
   }
 
   .certificate-details .company-logo {
-    width: auto;
+    width: 100px;
   }
 
   .cer-detail {
