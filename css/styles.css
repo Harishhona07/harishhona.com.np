@@ -4006,6 +4006,7 @@ td:last-child {
   list-style: none;
   font-size: calc(var(--text-size) * 1.05);
   margin-left: 0;
+  margin-top: 10px;
 }
 
 .s-about__list a {
