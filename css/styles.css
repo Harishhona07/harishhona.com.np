@@ -4680,6 +4680,20 @@ textarea {
   border-color: black;
 }
 
+.cer-skills {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cer-skills .skill {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * footer
@@ -4789,8 +4803,13 @@ textarea {
     width: 100%;
   }
 
+  .cer-skills {
+    justify-content: center;
+  }
+
   .cer-company {
-    gap: 1px;
+    gap: 0px;
+    justify-content: left;
   }
 
   .next-prev {
