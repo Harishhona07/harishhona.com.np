@@ -514,7 +514,16 @@ table {
 
 .s-footer__bottom .column {
   display: flex;
+  align-items: center;
   gap: 10%;
+  justify-content: right;
+}
+
+.foot-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .column a {
@@ -4691,7 +4700,8 @@ textarea {
 
 .cer-skills .skill {
   border: 1px solid black;
-  padding: 5px 10px;
+  padding: 2px 7px;
+  font-size: 1.5rem;
 }
 
 /* ------------------------------------------------------------------- 
@@ -4791,11 +4801,15 @@ textarea {
   }
 
   .certificate-details .company-logo {
-    width: 100px;
+    width: 50px;
   }
 
   .cer-detail {
     margin-top: 20px;
+  }
+
+  .cer-detail h2 {
+    font-size: 2.3rem;
   }
 
   .cer-detail button {
@@ -4808,7 +4822,7 @@ textarea {
   }
 
   .cer-company {
-    gap: 0px;
+    gap: 5px;
     justify-content: left;
   }
 
