@@ -2206,6 +2206,14 @@ input[type="button"].btn--primary {
   color: black;
 }
 
+#btn-white {
+  background: white;
+  border: 2px solid black;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
 .btn.btn--primary:focus,
 button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
